@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>Jon Beck Photography</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- bootstrap source code -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- link fonts to the file -->
+	<!-- playfair display-->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(window).scroll(function() {
+    if ($(".navbar").offset().top > 50) {
+        $('.navbar').addClass('affix');
+        $(".navbar-fixed-top").addClass("scrolled");
+        $('.navbar-brand img').attr('src','images/JBlogo.png'); //change src
+    } else {
+        $('.navbar').removeClass('affix');
+        $(".navbar-fixed-top").removeClass("scrolled");
+        $('.navbar-brand img').attr('src','images/JBlogo_white.png')
+    }   hha
+});
+	</script>
+
+	<!-- my own stylesheet -->
+	<link rel="stylesheet" href="stylesheets/style.css">
+	</head>
+
+	<!-- body start-->
+	<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- nav start-->
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+    <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <!-- logo--> 
+          <a class="navbar-brand" href="index.html"> <img src="images/JBlogo_white.png" height="30px"> </a> </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">home
+          <hr class="active-menu-item">
+          </a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="gallery.html">gallery</a></li>
+        <li><a href="#workshops">workshops</a></li>
+        <li><a href="#print">print</a></li>
+        <li>
+              <button type="button" class="btnSendQuote btn">send a quote</button>
+            </li>
+        <li> &nbsp; &nbsp;</li>
+        <!--        <li><a class="btnSendQuote" href="#sendquote">send a quote</a></li>--> 
+        <!--<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </li>--> 
+        <!--        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>-->
+      </ul>
+        </div>
+  </div>
+    </nav>
+<!-- nav end --> 
+<!-- carousel start-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+      
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+    <div class="item active"> <img src="images/landing image.png" alt="Jon Beck - Girl with Cigarette" width="1200" height="700">
+          <div class="carousel-caption">
+        <h2>JON BECK <br/>
+              PHOTOGRAPHY</h2>
+        <button type="button" class="btnLanding btn">view works</button>
+      </div>
+        </div>
+    <div class="item"> <img src="images/landing image 2.png" alt="Jon Beck - Girl with Cigarette" width="1200" height="700"> </div>
+    <div class="item"> <img src="images/landing image 3.png" alt="Jon Beck - Girl with Cigarette" width="1200" height="700"> </div>
+    
+    <!-- Left and right controls --> 
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+    </div>
+<!-- carousel end--> 
+
+<!-- start featured works -->
+<div class="container-fluid text-center featured-section">
+      <h3>featured works</h3>
+      <hr/>
+      <p class="subtitletext"> “I believe photographs have to provoke an emotion, represent uniqueness and tell a story.” </p>
+      <div id="featuredworksCarousel" class="carousel slide">
+    <div class="carousel-inner">
+          <div class="item active">
+        <div class="row"> 
+              <div class="col-md-4 col-xs-4"> <img src="images/featuredworksOne.png" alt="1" class="img-responsive"> </div>
+              <div class="col-md-4 col-xs-4"><img src="images/featuredworksTwo.png" alt="1" class="img-responsive"></div>
+              <div class="col-md-4 col-xs-4"><img src="images/featuredworksThree.png" alt="1" class="img-responsive"> </div>
+            </div>
+      </div>
+          <div class="item">
+        <div class="row">
+              <div class="col-md-4 col-xs-4"> <img src="images/featuredWorksFour.png" alt="1" class="img-responsive"> </div>
+              <div class="col-md-4 col-xs-4"><img src="images/featuredworksTwo.png" alt="1" class="img-responsive"></div>
+              <div class="col-md-4 col-xs-4"><img src="images/featuredworksThree.png" alt="1" class="img-responsive"> </div>
+            </div>
+      </div>
+          <!-- page 2 --> 
+          
+          <!-- carousel controls --> 
+          <a class="left carousel-control" href="#featuredworksCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#featuredworksCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+  </div>
+      <button type="button" class="btnCTAwhitebg btn">see all works by category</button>
+    </div>
+<!-- end featured works --> 
+
+<!-- start workshops -->
+<div class="container-fluid workshop-box">
+      <div class="row">
+    <div class="col-sm-12"></div>
+    <img class="img-responsive" src="images/workshop bg.png">
+    <div class="workshop-description">
+          <h3 class="workshop-desc">looking to improve your photography?</h3>
+          <button type="button" class="btnWorkshop btn">explore workshops and tours</button>
+        </div>
+  </div>
+    </div>
+<!-- end workshops --> 
+
+<!-- start buy our prints -->
+<div class="container-fluid text-center prints-section">
+      <h3>buy our prints</h3>
+      <hr/>
+      <p class="subtitletext"> “Individually produced to the highest possible standards Jon Beck's  limited edition prints are printed on world leading photographic paper and cavassses.” </p>
+      <!-- start carousel-->
+      <div id="printsCarousel" class="carousel slide">
+    <div class="carousel-inner">
+          <div class="item active">
+        <div class="row">
+              <div class="col-sm-4"> <img src="images/featuredworksOne.png" alt="1" class="img-responsive">
+            <div class="greybox">
+                  <h5>framed prints</h5>
+                  <p class="prints-desc"><i class="from-text">from</i> AUD50</p>
+                </div>
+          </div>
+              <div class="col-sm-4"><img src="images/featuredworksTwo.png" alt="1" class="img-responsive">
+            <div class="greybox">
+                  <h5>printed posters</h5>
+                  <p class="prints-desc"><i class="from-text">from</i> AUD35</p>
+                </div>
+          </div>
+              <div class="col-sm-4"><img src="images/featuredworksThree.png" alt="1" class="img-responsive">
+            <div class="greybox">
+                  <h5>canvas prints</h5>
+                  <p class="prints-desc"><i class="from-text">from</i> AUD150</p>
+                </div>
+          </div>
+            </div>
+      </div>
+          <div class="item">
+        <div class="row">
+              <div class="col-sm-4"> <img src="images/featuredWorksFour.png" alt="1" class="img-responsive">
+            <div class="greybox">
+                  <h5>canvas prints</h5>
+                  <p class="prints-desc"><i class="from-text">from</i> $49</p>
+                </div>
+          </div>
+              <div class="col-sm-4"><img src="images/featuredworksTwo.png" alt="1" class="img-responsive">
+            <div class="greybox">
+                  <h5>canvas prints</h5>
+                  <p class="prints-desc"><i class="from-text">from</i> $49</p>
+                </div>
+          </div>
+              <div class="col-sm-4"><img src="images/featuredworksThree.png" alt="1" class="img-responsive">
+            <div class="greybox">
+                  <h5>canvas prints</h5>
+                  <p class="prints-desc"><i class="from-text">from</i> $49</p>
+                </div>
+          </div>
+            </div>
+      </div>
+          <!-- page 2 --> 
+          
+          <!-- carousel controls --> 
+          <a class="left carousel-control" href="#printsCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#printsCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+  </div>
+      <!-- end carousel -->
+      <button type="button" class="btnCTAwhitebg btn">shop all prints</button>
+    </div>
+<!-- end print works -->
+
+<div class="container-fluid">
+      <div class="row row-height">
+    <div class="col-md-6 padding-0 item-text">
+          <div class="item-center">
+        <h3>about jon beck</h3>
+        <p>Jon Beck is an international award winning photographer, specializing in fine art, actor portraits, landscape and building photography. </p>
+        <a href="about.html" class="btnFindOutMore btn">more about jon beck</a>
+       
+      </div>
+        </div>
+    <div class="col-md-6 padding-0 "> <img src="images/jonbeck.png" class="img-responsive" alt="" /> </div>
+  </div>
+    </div>
+    
+<!-- start footer-->
+<section id="footer">
+      <div class="container footer-wrapper">
+    <div class="row text-left text-xs-left text-sm-left text-md-left">
+          <div class="col-xs-12 col-sm-4 col-md-4">
+        <div id="social-media-links">
+              <table id="social-media-table">
+            <tr class="logotr">
+                  <td colspan="3" class="logotd"><img class="footer-logo" src="images/JBlogo_white.png"></td>
+                </tr>
+            <tr class="logotr">
+                  <td><a href="pinterest.com"><img class="social-button" src="images/pinterest-logo.png"></a></td>
+                  <td><a href="instagram.com"><img class="social-button" src="images/instagram-logo.png"></a></td>
+                  <td><a href="facebook.com"><img class="social-button" src="images/facebook-logo.png"></a></td>
+                </tr>
+          </table>
+            </div>
+      </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5>links</h5>
+        <ul class="list-unstyled quick-links">
+              <li class="footer-link"><a href="index.html"><i class="fa fa-angle-double-right"></i>home</a></li>
+              <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>about</a></li>
+              <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>gallery</a></li>
+              <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>print</a></li>
+              <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>workshops</a></li>
+              <li class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>send a quote</a></li>
+            </ul>
+      </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5>find us / contact us</h5>
+        <p class="footer-find-us"> jon beck (art director)<br />
+              <i class="fa fa-envelope" style="font-size:12px"></i> info@JBphotography.com <br />
+              <i class="fa fa-phone" style="font-size:12px"></i> 0411 132 843 <br />
+              <i class="fa fa-map-pin" style="font-size:12px"></i> Level 1, 265 Pittwater Road <br/>
+              No where 2100 </p>
+      </div>
+        </div>
+    <br />
+  </div>
+      <div class="row bottom-footer">
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6 footer-line">Copyright © 2018 Jon Beck Photography. All Rights Reserved. | Terms of Service | Privacy Policy</p>
+          <br />
+        </div>
+  </div>
+    </section>
+</body>
+</html>
