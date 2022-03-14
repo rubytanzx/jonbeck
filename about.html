@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>Jon Beck Photography</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- bootstrap source code -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- link fonts to the file -->
+	<!-- playfair display-->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(window).scroll(function() {
+    if ($(".navbar").offset().top > 50) {
+        $('.navbar').addClass('affix');
+        $(".navbar-fixed-top").addClass("scrolled");
+        $('.navbar-brand img').attr('src','images/JBlogo.png'); //change src
+    } else {
+        $('.navbar').removeClass('affix');
+        $(".navbar-fixed-top").removeClass("scrolled");
+        $('.navbar-brand img').attr('src','images/JBlogo_white.png')
+    }   
+});
+	</script>
+
+	<!-- my own stylesheet -->
+	<link rel="stylesheet" href="stylesheets/about.css">
+	</head>
+
+	<!-- body start-->
+	<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- nav start-->
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+    <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <!-- logo--> 
+          <a class="navbar-brand" href="index.html"> <img src="images/JBlogo_white.png" height="30" alt="logo in white"> </a> </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">home </a></li>
+        <li><a href="about.html">about
+          <hr class="active-menu-item">
+          </a> </li>
+        <li><a href="gallery.html">gallery</a></li>
+        <li><a href="#workshops">workshops</a></li>
+        <li><a href="#print">print</a></li>
+        <li>
+              <button type="button" class="btnSendQuote btn">send a quote</button>
+            </li>
+        <li> &nbsp; &nbsp;</li>
+      </ul>
+        </div>
+  </div>
+    </nav>
+<!-- nav end -->
+
+<div class="container-fluid">
+      <div class="row" style="padding-bottom: 30px;">
+    <div class="about-side-header col-md-3">
+          <h3 class="about-main-text">ABOUT</h3>
+          <hr class="about-underline">
+        </div>
+    <div class="col-md-1 adjusted-col"></div>
+    <div class="about-full-desc col-md-7">
+          <h1 class="jon-beck">This is Jon Beck.</h1>
+          <img src="images/portrait-photography/portrait-1.jpg" class="img-responsive" alt="portrait 1">
+          <p class="jon-beck-desc" style="	padding-top: 30px;
+">Jon Beck is an international award winning photographer, specializing in fine art, actor portraits, landscape and building photography. Jon’s approach to his work is one of no compromise, from image capture, printing and framing he uses only the finest quality materials available. All Jon’s images are captured on professional film using medium format equipment. Jon’s stunning art pieces decorate the walls of many homes, offices and commercial spaces around Australia and the world. </p>
+          <p class="jon-beck-quote"> “I am drawn to the diversity of the world – from Australia’s red soil centre, the character in peoples faces and the unique textures of our building heritage. My combined passion for the outdoors , people and their environment enables me to create iconic images from Australia’s diverse landscape, New Zealand and the world.I believe photograph’s have to provoke an emotion, represent uniqueness and tell a story.” </p>
+          <p class="jon-beck-desc"> Living in Queensland, he is surrounded by beautiful beaches, the unique characters of its people and ideal weather; which Jon uses for inspiration to create his stunning images. Jon constantly strives to capture spectacular light and mood within his images, while maintaining a fresh hipster perspective. He believes a photograph has to provoke an emotion, represent the landscape and tell a story- but with a difference. </p>
+          <a href="gallery.html" class="btnCTAwhitebg btn">see gallery of works</a> </div>
+  </div>
+      <div class="col-md-1"></div>
+    </div>
+
+<!-- start footer-->
+<section id="footer">
+      <div class="container footer-wrapper">
+    <div class="row text-left text-xs-left text-sm-left text-md-left">
+          <div class="col-xs-12 col-sm-4 col-md-4">
+        <div id="social-media-links">
+              <table id="social-media-table">
+            <tr class="logotr">
+                  <td colspan="3" class="logotd"><img class="footer-logo" src="images/JBlogo_white.png" alt="logo in white"></td>
+                </tr>
+            <tr class="logotr">
+                  <td><a href="pinterest.com"><img class="social-button" src="images/pinterest-logo.png" alt="pinterest"></a></td>
+                  <td><a href="instagram.com"><img class="social-button" src="images/instagram-logo.png" alt="instagram"></a></td>
+                  <td><a href="facebook.com"><img class="social-button" src="images/facebook-logo.png" alt="facebook"></a></td>
+                </tr>
+          </table>
+            </div>
+      </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5>links</h5>
+        <ul class="list-unstyled quick-links">
+              <li class="footer-link"><a href="index.html"><i class="fa fa-angle-double-right"></i>home</a></li>
+              <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>about</a></li>
+              <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>gallery</a></li>
+              <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>print</a></li>
+              <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>workshops</a></li>
+              <li class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>send a quote</a></li>
+            </ul>
+      </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5>find us / contact us</h5>
+        <p class="footer-find-us"> jon beck (art director)<br />
+              <i class="fa fa-envelope" style="font-size:12px"></i> info@JBphotography.com <br />
+              <i class="fa fa-phone" style="font-size:12px"></i> 0411 132 843 <br />
+              <i class="fa fa-map-pin" style="font-size:12px"></i> Level 1, 265 Pittwater Road <br/>
+              No where 2100 </p>
+      </div>
+        </div>
+    <br />
+  </div>
+      <div class="row bottom-footer">
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h6 footer-line">Copyright © 2018 Jon Beck Photography. All Rights Reserved. | Terms of Service | Privacy Policy</p>
+          <br />
+        </div>
+  </div>
+    </section>
+</body>
+</html>

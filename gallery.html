@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Jon Beck Photography - Gallery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- bootstrap source code -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- link fonts to the file -->
+<!-- playfair display-->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- nav bar js script -->
+<script>
+		$(window).scroll(function() {
+    if ($(".navbar").offset().top > 50) {
+        $('.navbar').addClass('affix');
+        $(".navbar-fixed-top").addClass("scrolled");
+        $('.navbar-brand img').attr('src','images/JBlogo.png'); //change src
+    } else {
+        $('.navbar').removeClass('affix');
+        $(".navbar-fixed-top").removeClass("scrolled");
+        $('.navbar-brand img').attr('src','images/JBlogo_white.png')
+    }   
+});
+	</script>
+<!-- end javascript for nav bar-->
+<!-- javascript for category filter--> 
+<script>
+		$(document).ready(function(){
+
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });
+    
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
+
+});</script>
+<!-- end javascript for category filter--> 
+<!-- my own stylesheet -->
+<link rel="stylesheet" href="stylesheets/gallery.css">
+
+<!-- light box -->
+<link href="lightbox/lightbox.min.css" rel="stylesheet">
+</head>
+
+<!-- body start-->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- nav start-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <!-- logo--> 
+      <a class="navbar-brand" href="index.html"> 
+      <img src="images/JBlogo_white.png" height="30" alt="logo in white"> </a> </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">home </a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="gallery.html">gallery
+          <hr class="active-menu-item">
+          </a></li>
+        <li><a href="#workshops">workshops</a></li>
+        <li><a href="#print">print</a></li>
+        <li>
+          <button type="button" class="btnSendQuote btn">send a quote</button>
+        </li>
+        <li> &nbsp; &nbsp;</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- nav end -->
+
+<div class="container gallery-container">
+  <!-- filter categories-->
+   <div class="row">
+    <div class="filter-categories">
+      <button class="btn btn-default filter-button" data-filter="all">all</button>
+      <button class="btn btn-default filter-button" data-filter="fine-art">fine art</button>
+      <button class="btn btn-default filter-button" data-filter="actor-portraits">portraits</button>
+      <button class="btn btn-default filter-button" data-filter="landscape">landscape</button>
+      <button class="btn btn-default filter-button" data-filter="street">street</button>
+    </div>
+  </div>
+  <br/>
+  <!-- thumbnails--> 
+  <div class="row no-pad"> 
+    <!-- fine art-->
+    <div class="gallery_product filter fine-art col-md-4 col-sm-6 col-xs-12"> <a href="images/fine-art-photography/image-1.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/fine-art-photography/image-1.jpg" alt="Alt Text" class="gallery-image" />
+      <div class="overlay">
+        <div class="text">
+          <h6>cinderlla's shoe</h6>
+          <i class="category-text">fine art</i> </div>
+      </div>
+      </a> </div>
+    
+    <!-- fine art-->
+    <div class="gallery_product filter fine-art col-md-4 col-sm-6 col-xs-12"> <a href="images/fine-art-photography/image-2.jpg" data-lightbox="gallery" data-image-alt="Image 2"> <img src="images/fine-art-photography/image-2.jpg" alt="Alt Text" class="gallery-image" />
+      <div class="overlay">
+        <div class="text">
+          <h6>disappearance</h6>
+          <i class="category-text">fine art</i> </div>
+      </div>
+      </a> </div>
+    <!-- fine art-->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter fine-art"> <a href="images/fine-art-photography/image-3.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/fine-art-photography/image-3.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>the giving tree</h6>
+          <i class="category-text">fine art</i> </div>
+      </div>
+      </a> </div>
+    <!-- actor portraits-->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter actor-portraits"> <a href="images/portrait-photography/portrait-1.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/portrait-photography/portrait-1.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>ageless</h6>
+          <i class="category-text">actor portrait</i> </div>
+      </div>
+      </a> </div>
+    <!-- actor portraits-->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter actor-portraits"> <a href="images/portrait-photography/portrait-2.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/portrait-photography/portrait-2.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>swim</h6>
+          <i class="category-text">actor portrait</i> </div>
+      </div>
+      </a> </div>
+    <!-- actor portraits-->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter actor-portraits"> <a href="images/portrait-photography/portrait-3.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/portrait-photography/portrait-3.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>unmasked</h6>
+          <i class="category-text">actor portrait</i> </div>
+      </div>
+      </a> </div>
+    <!-- actor portraits-->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter actor-portraits"> <a href="images/portrait-photography/portrait-5.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/portrait-photography/portrait-5.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>smile</h6>
+          <i class="category-text">actor portrait</i> </div>
+      </div>
+      </a> </div>
+    <!-- actor portraits-->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter actor-portraits"> <a href="images/portrait-photography/portrait-6.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/portrait-photography/portrait-6.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>nature</h6>
+          <i class="category-text">actor portrait</i> </div>
+      </div>
+      </a> </div>
+    <!-- actor portraits-->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter actor-portraits"> <a href="images/portrait-photography/portrait-8.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/portrait-photography/portrait-8.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>smoke</h6>
+          <i class="category-text">actor portrait</i> </div>
+      </div>
+      </a> </div>
+    <!-- actor portraits-->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter actor-portraits"> <a href="images/portrait-photography/portrait-9.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/portrait-photography/portrait-9.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>young at heart</h6>
+          <i class="category-text">actor portrait</i> </div>
+      </div>
+      </a> </div>
+    <!-- actor portraits-->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter actor-portraits"> <a href="images/portrait-photography/portrait-10.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/portrait-photography/portrait-10.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>genie in a bottle</h6>
+          <i class="category-text">actor portrait</i> </div>
+      </div>
+      </a> </div>
+    <!-- landscape -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter landscape"> <a href="images/landscape-photography/image-1.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/landscape-photography/image-1.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>naveed farro</h6>
+          <i class="category-text">landscape</i> </div>
+      </div>
+      </a> </div>
+    <!-- landscape -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter landscape"> <a href="images/landscape-photography/image-2.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/landscape-photography/image-2.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>ferris wheel</h6>
+          <i class="category-text">landscape</i> </div>
+      </div>
+      </a> </div>
+    <!-- landscape -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter landscape"> <a href="images/landscape-photography/image-3.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/landscape-photography/image-3.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>clarity</h6>
+          <i class="category-text">landscape</i> </div>
+      </div>
+      </a> </div>
+    <!-- landscape -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter landscape"> <a href="images/landscape-photography/image-4.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/landscape-photography/image-4.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>solitude</h6>
+          <i class="category-text">landscape</i> </div>
+      </div>
+      </a> </div>
+    <!-- landscape -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter landscape"> <a href="images/landscape-photography/image-5.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/landscape-photography/image-5.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>gush</h6>
+          <i class="category-text">landscape</i> </div>
+      </div>
+      </a> </div>
+    <!-- landscape -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter landscape"> <a href="images/landscape-photography/image-6.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/landscape-photography/image-6.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>structure</h6>
+          <i class="category-text">landscape</i> </div>
+      </div>
+      </a> </div>
+    <!-- landscape -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter landscape"> <a href="images/landscape-photography/image-7.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/landscape-photography/image-7.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>ships</h6>
+          <i class="category-text">landscape</i> </div>
+      </div>
+      </a> </div>
+    
+    <!-- landscape -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter landscape"> <a href="images/landscape-photography/image-12.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/landscape-photography/image-12.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>farmland</h6>
+          <i class="category-text">landscape</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-1.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-1.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>hobo</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-2.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-2.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>breakfast at chanel's</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-3.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-3.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>cycle of life</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-4.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-4.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>aged</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-5.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-5.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>swarvoski</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter landscape"> <a href="images/street-photography/street-6.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-6.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>piping hot donuts</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-7.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-7.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>lost in the city</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-8.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-8.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>walks of life</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-9.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-9.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>statues</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-10.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-10.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>never too old for colors</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-11.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-11.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>youth</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-12.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-12.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>roaming</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-13.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-13.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>chess</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <!-- street -->
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-14.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-14.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>hustle &amp; bustle</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+    <div class="gallery_product col-md-4 col-sm-6 col-xs-12 filter street"> <a href="images/street-photography/street-15.jpg" data-lightbox="gallery" data-image-alt="Image 1"> <img src="images/street-photography/street-15.jpg" alt="Alt Text" />
+      <div class="overlay">
+        <div class="text">
+          <h6>portrait of nature</h6>
+          <i class="category-text">street</i> </div>
+      </div>
+      </a> </div>
+  </div><!-- end thumbnails-->
+</div>
+<!-- end row--> 
+
+<!-- start footer-->
+<section id="footer">
+  <div class="container footer-wrapper">
+    <div class="row text-left text-xs-left text-sm-left text-md-left">
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div id="social-media-links">
+          <table id="social-media-table">
+            <tr class="logotr">
+              <td colspan="3" class="logotd"><img class="footer-logo" src="images/JBlogo_white.png" alt="logo in white"></td>
+            </tr>
+            <tr class="logotr">
+              <td><a href="pinterest.com"><img class="social-button" src="images/pinterest-logo.png" alt="pinterest"></a></td>
+              <td><a href="instagram.com"><img class="social-button" src="images/instagram-logo.png" alt="instagram"></a></td>
+              <td><a href="facebook.com"><img class="social-button" src="images/facebook-logo.png" alt="facebook"></a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5>links</h5>
+        <ul class="list-unstyled quick-links">
+          <li class="footer-link"><a href="index.html"><i class="fa fa-angle-double-right"></i>home</a></li>
+          <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>about</a></li>
+          <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>gallery</a></li>
+          <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>print</a></li>
+          <li  class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>workshops</a></li>
+          <li class="footer-link"><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>send a quote</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5>find us / contact us</h5>
+        <p class="footer-find-us"> jon beck (art director)<br />
+          <i class="fa fa-envelope" style="font-size:12px"></i> info@JBphotography.com <br />
+          <i class="fa fa-phone" style="font-size:12px"></i> 0411 132 843 <br />
+          <i class="fa fa-map-pin" style="font-size:12px"></i> Level 1, 265 Pittwater Road <br/>
+          No where 2100 </p>
+      </div>
+    </div>
+    <br />
+  </div>
+  <div class="row bottom-footer">
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+      <p class="h6 footer-line">Copyright © 2018 Jon Beck Photography. All Rights Reserved. | Terms of Service | Privacy Policy</p>
+      <br />
+    </div>
+  </div>
+</section>
+<!-- lightbox js scripts--> 
+<script src="assets/dist/js/main.js"></script> 
+<script src="lightbox/lightbox.min.js"></script>
+</body>
+</html>
